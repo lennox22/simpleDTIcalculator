@@ -16,7 +16,7 @@ addExpenseButton.onclick = addExpense;
 //variables
 let monthlyIncome = 0;
 let expenses = [];
-let expenseTotal = 0;
+let expenseTotal = 0.00;
 let balance = 0;
 
 //functions
@@ -46,7 +46,7 @@ function addExpense(event) {
     let newExpense = document.createElement('p');
     newExpense.innerText = expense.expenseName + ": $" + expense.expenseAmount;
     expenseList.appendChild(newExpense);
-    expenseAmount = parseInt(amountInput.value);
+    expenseAmount = parseFloat(amountInput.value);
     expenses.push(expenseAmount);
     nameInput.value = '';
     amountInput.value = '';
